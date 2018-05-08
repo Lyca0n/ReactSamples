@@ -5,6 +5,14 @@ class Vis extends React.Component{
             toggle: false,
             title: 'Some Title'
         };
+        this.toggleVis = this.toggleVis.bind(this);
+    }
+    toggleVis(){
+        this.setState((prevState)=>{
+            return {
+                toggle:!prevState.toggle
+            }
+        });
     }
     render(){
         return (
@@ -16,3 +24,5 @@ class Vis extends React.Component{
         );
     }
 }
+
+ReactDOM.render(<Vis/>,document.getElementById('app'));
