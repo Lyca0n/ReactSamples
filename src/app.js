@@ -1,5 +1,6 @@
-//import './util.js';
-import {square, add} from './util.js';
+import validator from 'validator';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import IndecisionApp from './component/IndecisionApp';
 
-console.log('App is running!');
-console.log(square(4), add(100,100));
+ReactDOM.render(<IndecisionApp options={['option1','options2']} />,document.getElementById('app'));
