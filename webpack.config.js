@@ -21,11 +21,21 @@ module.exports ={
         /**
          * use babel-loader to run babel-core which replicate babel-cli functionality, to convert ES6 Syntax to ES5 as well as translating JSX into javascript
          */
-        rules:[{
-            loader:'babel-loader',
-            test: /\.js$/,
-            exclude : /node_modules/
-        }]
+        rules:[
+            {
+                loader:'babel-loader',
+                test: /\.js$/,
+                exclude : /node_modules/
+            },
+            {
+                test: /\.s?css$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
+            }
+        ]
     },
     devtool:'cheap-module-eval-source-map',
     devServer: {
