@@ -6,3 +6,9 @@ body{
     font-size: size;
     background: $dark-blue;
 }
+button{
+    cursor:pointer;
+}
+button:disabled{
+    cursor: default;
+}
